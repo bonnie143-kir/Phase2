@@ -12,17 +12,16 @@
     <img src="/assets/Chatting.jpg" style="width: 185px;" alt="logo">
 </div>
 <br>
-<div class="content">
+<div id="content">
   <form id="login">
     <h4>Please login to your account</h4>
 
-    <input type="email" [(ngModel)]="email" name="email" class="form-control" style="width: 300px;" />
-    <label class="form-label" for="email">Email address</label>
+    <input type="email" [(ngModel)]="email" name="email" style="width: 300px;" autofocus/><br>
+    <label class="form-label" for="email">Email address</label><br>
 
-    <input type="password" [(ngModel)]="password" name="password" class="form-control" style="width: 300px;"/>
-    <label class="form-label" for="passsword">Password</label>
-
-    <br>
+    <input type="password" [(ngModel)]="password" name="password" style="width: 300px;"/><br>
+    <label class="form-label" for="passsword">Password</label><br>
+    
     <button (click)="click()" class="btn btn-primary btn-block mb-4">Sign in</button>
     
   </form>
