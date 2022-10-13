@@ -26,7 +26,6 @@ app.post('/auth', function(req, res){
             console.log(docs);
             res.send(docs);
             client.close();
-
         });
     });
 });
