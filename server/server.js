@@ -41,5 +41,5 @@ httpsServer = https.createServer(options, app);
 
 const PORT = 3000;
 httpsServer.listen(PORT, ()=> {
-    console.log('Starting https server at: ${PORT}');
+    console.log('Starting https server at: ', PORT);
 });

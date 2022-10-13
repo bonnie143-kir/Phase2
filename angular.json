@@ -61,6 +61,13 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "sslKey": "./server/key.pem",
+            "sslCert": "./server/cert.pem",
+            "ssl": true,
+            "host": "s5172569.elf.ict.griffith.edu.au",
+            "port": 3002
+        },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
