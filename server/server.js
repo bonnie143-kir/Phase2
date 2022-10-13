@@ -24,6 +24,14 @@ app.post('/auth', function(req, res){
             if (err) throw err;
             console.log("Found the following records");
             console.log(docs);
+            for (let i=0; i<users.length; i++){
+                if (req.body.email == users[i].email){
+                    console.log(users[i]);
+                    res.send("exists");
+                }else{
+                    res.send("no");
+                }
+            }
             res.send(docs);
             client.close();
         });
