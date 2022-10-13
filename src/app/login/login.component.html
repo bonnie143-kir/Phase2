@@ -12,8 +12,8 @@
     <img src="/assets/Chatting.jpg" style="width: 185px;" alt="logo">
 </div>
 <br>
-
-<form id="login">
+<div id="divLogin">
+  <form id="login">
     <h4>Please login to your account</h4>
 
     <input type="email" [(ngModel)]="email" name="email" class="form-control" style="width: 300px;" />
@@ -25,5 +25,6 @@
     <br>
     <button (click)="click()" class="btn btn-primary btn-block mb-4">Sign in</button>
     
-</form>
+  </form>
+</div>
 </body>
