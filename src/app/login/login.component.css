@@ -6,7 +6,19 @@
     height: 100;    
 }
 
-#divLogin {
+#content {
+    width:800px;
+    margin: auto;
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+    background-color: antiquewhite;  
     align-content: center;
-    position: relative;
+}
+.form-signin {
+    align-items: center;
+}
+
+.form-control {
+    align-items: center;
 }
