@@ -7,7 +7,29 @@ app.use(express.json());
 const cors = require('cors');
 app.use(cors());
 
+// setting up mongoclient
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+var mongodb = require('mongodb');
+var ObjectId = mongodb.ObjectId;
+
 // this is where the routes/endpoints go
+app.post('/auth', function(req, res){
+    MongoClient.connect(url, {
+        useNewUrlParser: true
+    }, function(err, client) {
+        if (err) throw err;
+        let db = client.db("chat");
+        db.collection("users").find({}).toArray(function(err, docs) {
+            if (err) throw err;
+            console.log("Found the following records");
+            console.log(docs);
+            res.send(docs);
+            client.close();
+
+        });
+    });
+});
 
 const https = require('https'),
     fs = require('fs'),
