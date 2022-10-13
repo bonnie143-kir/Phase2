@@ -33,36 +33,36 @@ password = ""
     })
     .subscribe((data:any)=> {
       if (data.role == 'super'){
-        localStorage.setItem('email', data.email);
-        localStorage.setItem('password', data.password);
-        localStorage.setItem('role', data.role);
-        localStorage.setItem('id', data.id);
-        localStorage.setItem('username', data.username);
-        localStorage.setItem('show', 'false');
+        sessionStorage.setItem('email', data.email);
+        sessionStorage.setItem('password', data.password);
+        sessionStorage.setItem('role', data.role);
+        sessionStorage.setItem('id', data.id);
+        sessionStorage.setItem('username', data.username);
+        sessionStorage.setItem('show', 'false');
         this.router.navigateByUrl('/super-admin');
       }else if (data.role == 'groupAd') {
-        localStorage.setItem('email', data.email);
-        localStorage.setItem('password', data.password);
-        localStorage.setItem('role', data.role);
-        localStorage.setItem('id', data.id);
-        localStorage.setItem('username', data.username);
-        localStorage.setItem('show', 'false');
+        sessionStorage.setItem('email', data.email);
+        sessionStorage.setItem('password', data.password);
+        sessionStorage.setItem('role', data.role);
+        sessionStorage.setItem('id', data.id);
+        sessionStorage.setItem('username', data.username);
+        sessionStorage.setItem('show', 'false');
         this.router.navigateByUrl('/group-admin');
       }else if (data.role == 'groupAs') {
-        localStorage.setItem('email', data.email);
-        localStorage.setItem('password', data.password);
-        localStorage.setItem('role', data.role);
-        localStorage.setItem('id', data.id);
-        localStorage.setItem('username', data.username);
-        localStorage.setItem('show', 'false');
+        sessionStorage.setItem('email', data.email);
+        sessionStorage.setItem('password', data.password);
+        sessionStorage.setItem('role', data.role);
+        sessionStorage.setItem('id', data.id);
+        sessionStorage.setItem('username', data.username);
+        sessionStorage.setItem('show', 'false');
         this.router.navigateByUrl('/group-assist');
       }else if (data.role == 'normalUser') {
-        localStorage.setItem('email', data.email);
-        localStorage.setItem('password', data.password);
-        localStorage.setItem('role', data.role);
-        localStorage.setItem('id', data.id);
-        localStorage.setItem('username', data.username);
-        localStorage.setItem('show', 'false');
+        sessionStorage.setItem('email', data.email);
+        sessionStorage.setItem('password', data.password);
+        sessionStorage.setItem('role', data.role);
+        sessionStorage.setItem('id', data.id);
+        sessionStorage.setItem('username', data.username);
+        sessionStorage.setItem('show', 'false');
         this.router.navigateByUrl('/normalUser');
       } else if (data.length == 0) {
         alert('Invalid details'); 
